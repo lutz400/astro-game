@@ -23,3 +23,18 @@ img{
     width: 100%;
     object-fit: contain;
 }
+form{
+    margin-top: 2%;
+}
+input[type=submit]{
+    background-color: #186aad;
+    color: #ffffff;
+    font-size: 2rem;
+    border: none;
+    margin-top: 2%;
+    padding: 0% 2%;
+    border-radius: 5px;
+}
+input[type=submit]:hover{
+    background-color: #114f81;
+}
