@@ -5,7 +5,8 @@ header{
     margin-bottom: 2%;
 }
 body{
-    background-image: url("images/Abell1367.jpg");
+    background-image: url("images/Abell1367_bg.jpg");
+    background-position: 20% 20%;
     background-size: cover;
 }
 h1, div{
@@ -16,4 +17,9 @@ h1, div{
 div{
     margin: 2%;
     font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+    object-fit: contain;
 }
