@@ -15,10 +15,12 @@ h1, div{
     text-align: center;
 }
 div{
-    margin: 2%;
     font-size: 1.5rem;
 }
-
+#formular{
+    margin: 3%;
+    font-size: 1.5rem;
+}
 img{
     width: 100%;
     object-fit: contain;
@@ -37,4 +39,11 @@ input[type=submit]{
 }
 input[type=submit]:hover{
     background-color: #114f81;
+}
+div[class*="field"]{
+    border: 2px solid white;
+    padding: 2%;
+}
+#question{
+    margin: 2% 0;
 }
