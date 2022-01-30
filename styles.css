@@ -9,21 +9,20 @@ body{
     background-position: 20% 20%;
     background-size: cover;
 }
-h1, div{
+h1, div, p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#ffffff;
     text-align: center;
 }
-div{
+div, p{
     font-size: 1.5rem;
+}
+p{
+    margin-top: 2%;
 }
 #formular{
     margin: 3%;
     font-size: 1.5rem;
-}
-img{
-    width: 100%;
-    object-fit: contain;
 }
 form{
     margin-top: 2%;
@@ -43,7 +42,23 @@ input[type=submit]:hover{
 div[class*="field"]{
     border: 2px solid white;
     padding: 2%;
+    transition: background-color 2s ease;
+}
+div[class*="field"]:hover{
+    background-color: blue;
+}
+#correct{
+    background-color: chartreuse;
+    border: 3px solid white;
+}
+#wrong1, #wrong2, #wrong3{
+    background-color: rgb(209, 51, 23);
+    border: 3px solid white;
 }
 #question{
     margin: 2% 0;
+}
+#weiter1, #weiter2{
+    text-align: center;
+    width: 25%;
 }
