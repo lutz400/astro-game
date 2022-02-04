@@ -8,6 +8,7 @@ body{
     background-image: url("images/Abell1367_bg.jpg");
     background-position: 20% 20%;
     background-size: cover;
+    margin: 0 5%;
 }
 h1, div, p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -56,9 +57,21 @@ div[class*="field"]:hover{
     border: 3px solid white;
 }
 #question{
-    margin: 2% 0;
+    margin: 2% 5%;
 }
-#weiter1, #weiter2{
+#weiter1, #weiter2, #weiter3, #weiter4, #weiter5{
     text-align: center;
     width: 25%;
+}
+.table{
+    margin: 2% auto;
+    max-width: 70%;
+}
+@media screen and (max-width:500px){
+    .table{
+        min-width: 95%;
+    }
+}
+td:last-child{
+    text-align: left;
 }
