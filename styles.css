@@ -79,3 +79,7 @@ div[class*="field"]:hover{
 td:last-child{
     text-align: left;
 }
+.lg_border{
+    border: 1px solid white;
+    padding: 2px;
+}
