@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>astro-query</title>
+        <script src="https://kit.fontawesome.com/9ed6a28856.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="functions.js"></script>
+    </head>
+<body>
+    <header>
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item"><a class="nav-link" href="astro_query.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">The Game</a></li>
+            <li class="nav-item"><a class="nav-link disabled-link" href="result.html">My Result</a></li>
+        </ul>
+    </header>
+    <h1>The Game</h1>
+    <div id="question1">
+        <img src="images/Pferdekopf.jpg" class="mx-auto img-thumbnail col-9 col-md-6 col-xl-4" id="kleinbild1" alt="Two Nebulas">
+        <p>What do you think is the official name of this deep-sky object?</p>
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-md-2 col-10 col-md-7 mx-auto">
+                <div class="col field" id="wro11" onclick="result('wrong', 1, 1)">Bad-luck Nebula</div>
+                <div class="col field" id="wro21" onclick="result('wrong', 2, 1)">Dusk and Dawn Nebula</div>
+                <div class="col field" id="corr1" onclick="result('correct', 0, 1)">Horsehead Nebula</div>
+                <div class="col field" id="wro31" onclick="result('wrong', 3, 1)">Red-Horizon Nebula</div>
+            </div>
+        </div>
+    </div>  
+    <div>
+        <p id="comment1"></p>
+        <button type="button" id="weiter1" class="btn btn-success" style="display: none;" onclick="cont(1)">Continue</button>
+    </div>
+    <div id="question2" style="display: none;">
+        <img src="images/Andromeda.jpg" class="mx-auto img-thumbnail col-9 col-md-6 col-xl-4" id="kleinbild2" alt="Andromeda Galaxy">
+        <p>This is the Andromeda Galaxy, approximately twice as big as our milky way, so consisting of about 200 billion stars. You can faintly see it with the naked eye in a clear night sky. What will happen in about 3 billion years?</p>
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-md-2 col-10 col-md-7 mx-auto">
+                <div class="col field" id="corr2" onclick="result('correct', 0, 2)">It will collide with our milky way</div>
+                <div class="col field" id="wro12" onclick="result('wrong', 1, 2)">It will explode</div>
+                <div class="col field" id="wro22" onclick="result('wrong', 2, 2)">It will be dark because all stars in it died</div>
+                <div class="col field" id="wro32" onclick="result('wrong', 3, 2)">It will be twice of today´s size</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="comment2"></p>
+        <button type="button" id="weiter2" class="btn btn-success" style="display: none;" onclick="cont(2)">Continue</button>
+    </div>
+    <div id="question3" style="display: none;">
+        <img src="images/Abell1367.jpg" class="mx-auto img-thumbnail col-9 col-md-6 col-xl-4" id="kleinbild3" alt="Several Galaxies">
+        <p>Whereas before you saw one galaxy, in this picture you actually see over one hundred - in astronomic terms those are our neighbour galaxies. The name though is less sexy - Abell 1367... Guess how long the light takes from there to reach our eyes?</p>
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-md-2 col-10 col-md-7 mx-auto">
+                <div class="col field" id="wro13" onclick="result('wrong', 1, 3)">30.000 minutes</div>
+                <div class="col field" id="wro23" onclick="result('wrong', 2, 3)">300.000 hours</div>
+                <div class="col field" id="wro33" onclick="result('wrong', 3, 3)">3 million days</div>
+                <div class="col field" id="corr3" onclick="result('correct', 0, 3)">300 million years</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="comment3"></p>
+        <button type="button" id="weiter3" class="btn btn-success" style="display: none;" onclick="cont(3)">Continue</button>
+    </div>
+    <div id="question4" style="display: none;">
+        <img src="images/M20-Trifidnebel.jpg" class="mx-auto img-thumbnail col-9 col-md-6 col-xl-4" id="kleinbild4" alt="Nebula in our Galaxy">
+        <p>This Nebula is called The Trifid-Nebula (Why - I don´t know). Guess why you see so many stars around it</p>
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-md-2 col-10 col-md-7 mx-auto">
+                <div class="col field" id="corr4" onclick="result('correct', 0, 4)">It is in the direction of our milky way´s center</div>
+                <div class="col field" id="wro14" onclick="result('wrong', 1, 4)">It is an optical deception</div>
+                <div class="col field" id="wro24" onclick="result('wrong', 2, 4)">A former big star exploded into small other stars</div>
+                <div class="col field" id="wro34" onclick="result('wrong', 3, 4)">Actually these are no stars, but comets</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="comment4"></p>
+        <button type="button" id="weiter4" class="btn btn-success" style="display: none;" onclick="cont(4)">Continue</button>
+    </div>
+    <div id="question5" style="display: none;">
+        <img src="images/Rosettennebel_NGC2237.jpg" class="mx-auto img-thumbnail col-9 col-md-6 col-xl-4" id="kleinbild5" alt="Orange Nebula">
+        <p>Another nebula - the Rosette Nebula this time. What happens inside nebulas?</p>
+        <div class="container"> 
+            <div class="row row-cols-1 row-cols-md-2 col-10 col-md-7 mx-auto">
+                <div class="col field" id="wro15" onclick="result('wrong', 1, 5)">Here, stars end their lives and leave cold gas as reminder </div>
+                <div class="col field" id="corr5" onclick="result('correct', 0, 5)">Here, stars are born through densification of gas</div>
+                <div class="col field" id="wro25" onclick="result('wrong', 2, 5)">Here stars regularly explode</div>
+                <div class="col field" id="wro35" onclick="result('wrong', 3, 5)">The gas we see is actually a pollution outside the earth atmosphere</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="comment5"></p>
+        <button type="button" id="weiter5" class="btn btn-success" style="display: none;" onclick="cont(5)">Finish Quiz</button>
+        <p id="achievement"></p><br>
+        <p id="achievement2"></p>
+        <button id="interpretation" onclick="document.location='result.html'" style="display: none;">Interpretation</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
